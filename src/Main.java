@@ -1,4 +1,5 @@
 import java.sql.SQLOutput;
+import java.util.List;
 import java.util.Random;
 
 public class Main {
@@ -104,10 +105,39 @@ public class Main {
         String episode = "Star Wars: Episode " + " ".repeat((int) (Math.random() * 10)) + ((int) (Math.random() * 7) + 1) + " - A New Hope";
         System.out.println(episode);
 
-        System.out.println(episode.replaceAll("[a-zA-Z:-]", "").trim());
+        System.out.println(episode.replaceAll("[a-zA-Z :-]", ""));
 
         System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
 
+//8. Suskaičiuoti kiek stringe “Don't Be a Menace to South Central While Drinking Your Juice in the Hood” yra žodžių trumpesnių arba lygių
+// nei 5 raidės. Pakartokite kodą su stringu “Tik nereikia gąsdinti Pietų Centro, geriant sultis pas save kvartale”.
+
+        String sentence1 = "Don't Be a Menace to South Central While Drinking Your Juice in the Hood";
+        String sentence2 = "Tik nereikia gąsdinti Pietų Centro, geriant sultis pas save kvartale";
+
+       String[] englishWords = sentence1.split(" ");
+        int countEnglish = 0;
+        for (String englishWord : englishWords) {
+            if (englishWord.length() < 5) {
+                countEnglish++;
+            }
+
+        }
+
+        System.out.println("Number of words in sentence1 with less than 5 characters: " + countEnglish);
+
+        String[] lithuanianWords = sentence2.split(" ");
+        int countELithuanian = 0;
+        for (String lithuanianWord : lithuanianWords) {
+            if (lithuanianWord.length() < 5) {
+                countELithuanian++;
+            }
+
+        }
+
+        System.out.println("Number of words in sentence2 with less than 5 characters: " + countELithuanian);
+
+        System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
 //9. Parašyti kodą, kuris generuotų atsitiktinį stringą iš lotyniškų mažųjų raidžių. Stringo ilgis 3 simboliai.
 
         String[] letters = {"a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"};

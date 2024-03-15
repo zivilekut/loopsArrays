@@ -57,8 +57,8 @@ public class Main {
 // Jį atspausdinti.
 
 
-        //String pirmosRaides1 = vardas.charAt(0) + pavarde.charAt(0);
-        //System.out.println(pirmosRaides1);
+        String pirmosRaides1 = vardas.charAt(0) + "" + pavarde.charAt(0);
+        System.out.println(pirmosRaides1);
 
         String pirmosRaides2 = vardas.substring(0, 1) + pavarde.substring(0, 1);
         System.out.println(pirmosRaides2);

@@ -108,18 +108,37 @@ public class Main {
 
         System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
 
+//9. Parašyti kodą, kuris generuotų atsitiktinį stringą iš lotyniškų mažųjų raidžių. Stringo ilgis 3 simboliai.
+
+        String[] letters = {"a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"};
+        Random random = new Random();
+
+        for (int l = 0; l < 3; l++) {
+            String randomElement = letters[random.nextInt(letters.length)];
+
+            System.out.print(randomElement + "");
+        }
+        System.out.println("");
+        System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+
 //10. Parašykite kodą, kuris generuotų atsitiktinį stringą su 10 atsitiktine tvarka išdėliotų žodžių, o žodžius generavimui imtų iš 8-me
 // uždavinyje pateiktų dviejų stringų. Žodžiai neturi kartotis. (reikės masyvo)
 
         String[] words = {"Don't", "Be", "a", "Menace", "to", "South", "Central", "While", "Drinking", "Your", "Juice", "in", "the", "Hood", "Tik", "nereikia", "gąsdinti", "Pietų", "Centro", "geriant", "sultis", "pas", "save", "kvartale"};
 
-        Random random = new Random();
 
         for (int i = 0; i < 10; i++) {
             String randomElement = words[random.nextInt(words.length)];
 
             System.out.print(randomElement + " ");
         }
+
+        System.out.println("");
+        System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+
+
+
+
 
 
     }

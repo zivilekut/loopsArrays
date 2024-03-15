@@ -115,7 +115,7 @@ public class Main {
         String sentence1 = "Don't Be a Menace to South Central While Drinking Your Juice in the Hood";
         String sentence2 = "Tik nereikia gąsdinti Pietų Centro, geriant sultis pas save kvartale";
 
-       String[] englishWords = sentence1.split(" ");
+        String[] englishWords = sentence1.split(" ");
         int countEnglish = 0;
         for (String englishWord : englishWords) {
             if (englishWord.length() < 5) {
@@ -165,10 +165,6 @@ public class Main {
 
         System.out.println("");
         System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
-
-
-
-
 
 
     }

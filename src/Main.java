@@ -1,4 +1,5 @@
 import java.sql.SQLOutput;
+import java.util.Random;
 
 public class Main {
     public static void main(String[] args) {
@@ -85,25 +86,40 @@ public class Main {
 //6. Sukurti kintamąjį su stringu: “An American in Paris”. Jame ištrinti visas balses. Rezultatą atspausdinti.
 // Kodą pakartoti su stringais: “Breakfast at Tiffany's”, “2001: A Space Odyssey” ir “It's a Wonderful Life”.
 
-        System.out.println(movie.replaceAll("[aeiouyAEIOUY]",""));
+        System.out.println(movie.replaceAll("[aeiouyAEIOUY]", ""));
 
         String movie2 = "Breakfast at Tiffany's";
         String movie3 = "2001: A Space Odyssey";
         String movie4 = "It's a Wonderful Life";
 
-        System.out.println(movie2.replaceAll("[aeiouyAEIOUY]",""));
-        System.out.println(movie3.replaceAll("[aeiouyAEIOUY]",""));
-        System.out.println(movie4.replaceAll("[aeiouyAEIOUY]",""));
+        System.out.println(movie2.replaceAll("[aeiouyAEIOUY]", ""));
+        System.out.println(movie3.replaceAll("[aeiouyAEIOUY]", ""));
+        System.out.println(movie4.replaceAll("[aeiouyAEIOUY]", ""));
 
         System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
 
 //7. Stringe, kurį generuoja toks kodas: "Star Wars: Episode "+ " ".repeat( (int) (Math.random() * 10))+((int)
 // (Math.random() * 7)+1) + " - A New Hope" Surasti ir atspausdinti epizodo numerį.
 
-        String episode = "Star Wars: Episode "+ " ".repeat( (int) (Math.random() * 10))+((int) (Math.random() * 7)+1) + " - A New Hope";
+        String episode = "Star Wars: Episode " + " ".repeat((int) (Math.random() * 10)) + ((int) (Math.random() * 7) + 1) + " - A New Hope";
         System.out.println(episode);
 
-        System.out.println(episode.replaceAll("[a-zA-Z:-]","").trim());
+        System.out.println(episode.replaceAll("[a-zA-Z:-]", "").trim());
+
+        System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+
+//10. Parašykite kodą, kuris generuotų atsitiktinį stringą su 10 atsitiktine tvarka išdėliotų žodžių, o žodžius generavimui imtų iš 8-me
+// uždavinyje pateiktų dviejų stringų. Žodžiai neturi kartotis. (reikės masyvo)
+
+        String[] words = {"Don't", "Be", "a", "Menace", "to", "South", "Central", "While", "Drinking", "Your", "Juice", "in", "the", "Hood", "Tik", "nereikia", "gąsdinti", "Pietų", "Centro", "geriant", "sultis", "pas", "save", "kvartale"};
+
+        Random random = new Random();
+
+        for (int i = 0; i < 10; i++) {
+            String randomElement = words[random.nextInt(words.length)];
+
+            System.out.print(randomElement + " ");
+        }
 
 
     }
